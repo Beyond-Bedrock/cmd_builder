@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" class=" text-foreground">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- CodeMirror CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/codemirror.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/theme/material.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/theme/eclipse.min.css" />
+
+  <!-- CodeMirror JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/mode/javascript/typescript.min.js"></script>
+
+  <meta name="description" content="Build custom minecraft bedrock commands with ease" />
+  <meta property="og:title" content="Custom Command Builder" />
+  <meta property="og:description" content="Build custom minecraft bedrock commands with ease" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cmd_builder.beyondbedrock.org" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Custom Command Builder" />
+  <meta name="twitter:description" content="Build custom minecraft bedrock commands with ease" />
+  <meta name="twitter:image" content="/assets/og-preview-CNvtGEiA.png" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" href="/assets/favicon-BWtlEh_c.ico" id="favicon" />
+
+  <link rel="preload" href="/assets/logo-DgLFOXRj.png" as="image" />
+  <link rel="preload" href="/assets/logo-dark-mP0dzgDX.png" as="image" />
+
+  <title>Custom Command Builder</title>
+
+  <meta property="og:image" content="/assets/og-preview-CNvtGEiA.png" />
+  <script type="module" crossorigin src="/assets/index-BcC5C-zv.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-PSNCufpD.css">
+</head>
+
+<body>
+  <div id="theme-loader"
+  data-theme="light"
+  data-logo="/assets/logo.png"
+  data-logo-dark="/assets/logo-dark.png"
+  style="
+    position: fixed;
+    inset: 0;
+    background: lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  ">
+  <div id="loading-container">
+    <img id="loading-logo" src="" alt="" style="width: 200px; height: auto;" />
+  </div>
+</div>
+
+<script>
+  (function () {
+    const loader = document.getElementById('theme-loader');
+    const loadingLogo = document.getElementById('loading-logo');
+    const isDark = localStorage.getItem('darkMode') === 'true';
+    loader.setAttribute('data-theme', isDark ? 'dark' : 'light');
+
+    if (isDark) {
+      loader.style.background = '#111';
+      loadingLogo.src = "assets/logo.png";
+    } else {
+      loader.style.background = 'lightgray';
+      loadingLogo.src = "assets/logo-dark.png";
+    }
+
+    setTimeout(() => {
+      loader.remove();
+    }, 1000);
+  })();
+</script>
+  <div id="root"></div>
+</body>
+
+</html>
