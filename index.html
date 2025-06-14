@@ -22,7 +22,6 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Custom Command Builder" />
   <meta name="twitter:description" content="Build custom minecraft bedrock commands with ease" />
-  <meta name="twitter:image" content="./assets/og-preview-CNvtGEiA.png" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="icon" href="./assets/favicon-BWtlEh_c.ico" id="favicon" />
 
@@ -30,18 +29,15 @@
   <link rel="preload" href="./assets/logo-dark-mP0dzgDX.png" as="image" />
 
   <title>Custom Command Builder</title>
+  <meta property="og:image" content="https://cmd-builder.beyondbedrock.org/assets/og-preview.png" />
+  <meta name="twitter:image" content="https://cmd-builder.beyondbedrock.org/assets/og-preview.png" />
 
-  <meta property="og:image" content="./assets/og-preview-CNvtGEiA.png" />
   <script type="module" crossorigin src="./assets/index-BcC5C-zv.js"></script>
   <link rel="stylesheet" crossorigin href="./assets/index-PSNCufpD.css">
 </head>
 
 <body>
-  <div id="theme-loader"
-  data-theme="light"
-  data-logo="./assets/logo.png"
-  data-logo-dark="./assets/logo-dark.png"
-  style="
+  <div id="theme-loader" data-theme="light" data-logo="./assets/logo.png" data-logo-dark="./assets/logo-dark.png" style="
     position: fixed;
     inset: 0;
     background: lightgray;
@@ -50,31 +46,31 @@
     justify-content: center;
     z-index: 9999;
   ">
-  <div id="loading-container">
-    <img id="loading-logo" src="" alt="" style="width: 200px; height: auto;" />
+    <div id="loading-container">
+      <img id="loading-logo" src="" alt="" style="width: 200px; height: auto;" />
+    </div>
   </div>
-</div>
 
-<script>
-  (function () {
-    const loader = document.getElementById('theme-loader');
-    const loadingLogo = document.getElementById('loading-logo');
-    const isDark = localStorage.getItem('darkMode') === 'true';
-    loader.setAttribute('data-theme', isDark ? 'dark' : 'light');
+  <script>
+    (function () {
+      const loader = document.getElementById('theme-loader');
+      const loadingLogo = document.getElementById('loading-logo');
+      const isDark = localStorage.getItem('darkMode') === 'true';
+      loader.setAttribute('data-theme', isDark ? 'dark' : 'light');
 
-    if (isDark) {
-      loader.style.background = '#111';
-      loadingLogo.src = "./assets/logo.png";
-    } else {
-      loader.style.background = 'lightgray';
-      loadingLogo.src = "./assets/logo-dark.png";
-    }
+      if (isDark) {
+        loader.style.background = '#111';
+        loadingLogo.src = "./assets/logo.png";
+      } else {
+        loader.style.background = 'lightgray';
+        loadingLogo.src = "./assets/logo-dark.png";
+      }
 
-    setTimeout(() => {
-      loader.remove();
-    }, 1000);
-  })();
-</script>
+      setTimeout(() => {
+        loader.remove();
+      }, 1000);
+    })();
+  </script>
   <div id="root"></div>
 </body>
 
